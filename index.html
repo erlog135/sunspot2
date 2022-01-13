@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunspot</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body style="background-color: darkslategray;">
+    <div id="topHider"></div>
+    <header id="header">
+        <div id="headerTextContainer">
+            <input readonly value="Weather" id="headerText" onkeydown="searchTextUpdate(event)">
+        </div> 
+        <div id="managerPanel">
+            <div class="icon-holder icon-selected panel-icon" style="float: left;"> 
+                <img src="images/icons/servers.svg" alt="menu">
+            </div>
+            <h1 class="panel-text">API Manager</h1>
+        </div>
+        <div id="settingsPanel">
+            <div class="icon-holder icon-selected panel-icon" style="float: left;"> 
+                <img src="images/icons/settings.svg" alt="menu">
+            </div>
+            <h1 class="panel-text">Settings</h1>
+        </div>
+        <div id="headerPanel">
+            <div class="icon-holder icon-selected panel-icon" style="float: left;"> 
+                <img src="images/icons/location.svg" alt="menu">
+            </div>
+            <h1 class="panel-text">Locations</h1>
+        </div>
+        
+        <div id="menuBtn" class="clickable icon-holder icon-selected"> 
+            <img id="menuImg" src="images/icons/menu.svg" alt="menu">
+        </div>
+        <div id="searchBtn" class="clickable icon-holder icon-selected">
+            <img id="searchImg" src="images/icons/search.svg" alt="search">
+        </div>
+
+    </header>
+    
+    <div id="content">
+        <div id="mapDiv" style="margin-bottom: 66px; background-color: darkslategray; display: none;">
+            <div class="rounded" style="background-color: dimgray;">
+                <img style="border-radius: 5px;" src="images/general/mercator_map.svg" alt="World Map" id="mapImg">
+            </div>
+            <div class="rounded" style="background-color: dimgray;">
+                <h1>Timeline</h1>
+                <h3>Loading...</h3>
+            </div>
+        </div>
+
+        <div id="mainDiv" style="margin-bottom: 66px; background-color: darkslategray;">
+            <div class="rounded" style="background-color: dimgray;">
+                <h1 id="mainTitle">Loading...</h1>
+                <h3 id="mainText">Loading...</h3>
+            </div>
+            <div class="rounded" style="background-color: dimgray;">
+                <h1 id="alertsTitle">Loading...</h1>
+                <div id="alertsList" style="height: 0px; overflow: auto;"></div>
+                <h3 id="alertsText">Loading...</h3>
+            </div>
+            <div class="rounded" style="background-color: dimgray;">
+                <h1>Forecast</h1>
+                <table id="forecastList">
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 90%;">
+                      </colgroup>
+                </table>
+            </div>
+        </div>
+        <div id="listDiv" style="margin-bottom: 66px; background-color: darkslategray; display: none;">
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <footer id="footer">
+            <div id="mapBtn" class="clickable icon-holder" style="float: left;"> 
+                <img src="images/icons/map.svg" alt="icon">
+            </div>
+            <div id="sunBtn" class="clickable icon-holder icon-selected" style="float: left;"> 
+                <img src="images/icons/sun.svg" alt="icon">
+            </div>
+            <div id="listBtn" class="clickable icon-holder" style="float: right;"> 
+                <img src="images/icons/list.svg" alt="icon">
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script src="app.js"></script>
+</html>

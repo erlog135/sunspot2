@@ -1,0 +1,301 @@
+*{
+    font-family: sans-serif;
+    color: white;
+}
+
+#topHider{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 33px;
+    background-color: darkslategray;
+    transition: all 0.5s;
+    transition-property: height, background-color;
+}
+
+#topHider.menu-selected{
+    height: 100%;
+    background-color: rgb(32, 55, 55);
+    transition: all 0.5s;
+    transition-property: height, background-color;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.icon-holder{
+    margin: 1px;
+    padding: 6px;
+    border-radius: 25px;
+    background-color: darkorange;
+}
+
+#menuBtn{
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    height: 36px;
+    width: 36px;
+}
+
+#searchBtn{
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    height: 36px;
+    width: 36px;
+}
+
+header{
+    text-align: center;
+}
+
+#headerPanel{
+    background-color: darkorange;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 16px);
+    height: 50px;
+    border-radius: 25px;
+    padding: 0px;
+    margin: 8px;
+    transition: all 0.5s;
+}   
+
+#managerPanel{
+    background-color: darkorange;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 16px);
+    height: 50px;
+    border-radius: 25px;
+    padding: 0px;
+    margin: 8px;
+    transition: transform 0.5s;
+}
+
+#settingsPanel{
+    background-color: darkorange;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 16px);
+    height: 50px;
+    border-radius: 25px;
+    padding: 0px;
+    margin: 8px;
+    transition: transform 0.5s;
+}
+
+.panel-text{
+    margin-top: 5px;
+    margin-right: 50px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+.menu-selected .panel-text{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.panel-icon{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.menu-selected .panel-icon{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#headerPanel.menu-selected{
+    transform: translate(0px,58px);
+    transition: all 0.5s;
+}
+
+#headerPanel.search-selected{
+    width: 100%;
+    height: 66px;
+    background-color: steelblue;
+    border-radius: 0px;
+    margin: 0px;
+    transition: all 0.5s, background-color 0.25s;
+}
+
+#managerPanel.menu-selected{
+    transform: translate(0px,116px);
+    transition: transform 0.5s;
+}
+
+#settingsPanel.menu-selected{
+    transform: translate(0px,174px);
+    transition: transform 0.5s;
+}
+
+header.icon-holder{
+    position: fixed;
+    top: 8px;
+    transition: transform 0.5s;
+}
+
+header.menu-selected .icon-holder{
+    position: fixed;
+    top: 8px;
+    transform: translate(0px,-58px);
+    transition: transform 0.5s;
+}
+
+#headerTextContainer{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#headerText{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: default;
+    width: calc(100% - 128px);
+    text-align: center;
+    pointer-events: visible;
+    margin: 0px;
+    font-size: 24pt;
+    transition: transform 0.5s;
+}
+
+#headerText.search-selected{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: normal;
+    cursor: text;
+    width: calc(100% - 128px);
+    text-align: center;
+    pointer-events: visible;
+    margin: 0px;
+    font-size: 24pt;
+    transition: transform 0.5s;
+}
+
+#headerText::placeholder{
+    color: lightgray;
+}
+
+header.menu-selected #headerText{
+    transform: translate(0px,-58px);
+    transition: transform 0.5s;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    background-color: darkorange;
+    position: fixed;
+    bottom: 0;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    border-radius: 500px;
+    margin: 8px;
+    transition: bottom 0.5s;
+}
+
+footer.menu-selected{
+    bottom: -58;
+    transition: bottom 0.5s;
+}
+
+.clickable:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor:pointer;
+}
+
+.icon-selected{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.view-selected{
+    display: block;
+}
+
+.view-unselected{
+    display: none;
+}
+
+.rounded{
+    border-radius: 25px;
+    padding: 16px;
+    margin-bottom: 8;
+}
+
+#content{
+    padding-top: 58px;
+    margin: 8px;
+}
+
+table{
+    width: 100%;
+}
+
+
+.chip{
+    width: 50px;
+    text-align: center;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 5px;
+    height: 20px;
+}
+
+.chip-box{
+    height: 30px;
+}
+
+hr{
+    border: 1px solid gray;
+}
+
+.weather-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 8px;
+}
+
+.days-list-element{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+p{
+    color: lightgray;
+}
+
+#mapImg{
+    width: 100%;
+}
+
+#headerPanel.error{
+    background-color: tomato;
+    transition: background-color 0.25s;
+}
