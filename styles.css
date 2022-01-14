@@ -159,6 +159,7 @@ header.menu-selected .icon-holder{
 }
 
 #headerText{
+    display: inline-block;
     background-color: transparent;
     border: none;
     outline: none;
